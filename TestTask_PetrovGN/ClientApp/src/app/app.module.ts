@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { MatExampleComponent } from './mat/mat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {FormControl,ReactiveFormsModule} from '@angular/forms';
@@ -21,18 +19,14 @@ import { BunComponent } from './buns/buns.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    BunComponent,
-    FetchDataComponent,
-    MatExampleComponent
+    BunComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: BunComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'mat', component:MatExampleComponent}
+      { path: '', component: BunComponent }
     ]),
     BrowserAnimationsModule,
     ReactiveFormsModule,

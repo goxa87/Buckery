@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 namespace TestTask_PetrovGN.Models
 {
+
+    /// <summary>
+    /// Стратегия уменьшения цены Оч быстро
+    /// </summary>
     public class NormalPriceDescreaser : IPriceDescreaser
     {
         public IBun Bun { get; }

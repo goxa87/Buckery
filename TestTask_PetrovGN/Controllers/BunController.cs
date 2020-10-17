@@ -20,6 +20,10 @@ namespace TestTask_PetrovGN.Controllers
             storage = _storage;
         }
 
+        /// <summary>
+        /// Получить данные
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<BunVM> Get()
         {
@@ -27,15 +31,22 @@ namespace TestTask_PetrovGN.Controllers
             return buns;
         }
 
+        /// <summary>
+        /// Сделать булок с заменой старых
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public StatusCodeResult CreateNewBuns()
         {
             storage.ReCreateAllBuns();
             return Ok();
         }
-
+        /// <summary>
+        /// Сделать булок вдобавку
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        public StatusCodeResult AdBuns()
+        public StatusCodeResult AddBuns()
         {
             storage.AddNewBuns();
             return Ok();

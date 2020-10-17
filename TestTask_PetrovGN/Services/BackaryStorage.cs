@@ -28,6 +28,10 @@ namespace TestTask_PetrovGN.Services
             this.Buns.AddRange(buns);
         }
 
+        /// <summary>
+        /// Верент в формате VM
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<BunVM> GetAllBuns()
         {
             return this.Buns.Select(e=>new BunVM() {
