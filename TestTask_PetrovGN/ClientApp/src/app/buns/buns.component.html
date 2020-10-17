@@ -1,0 +1,26 @@
+<h3>Наши плюшечки</h3>
+<button (click)="getData()">Получить данные</button>
+<table class='table table-striped' aria-labelledby="tableLabel" >
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Начальная цена</th>
+        <th>Изготовлено</th>
+        <th>Текущая цена</th>
+        <th>Отсечка свежести</th>
+        <th>Еще жива?</th>
+        <th>Срок годности</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bun of buns">
+        <td>{{ bun.name }}</td>
+        <td>{{ bun.startPrice }}</td>
+        <td>{{ bun.creationDate }}</td>
+        <td>{{ bun.curentPrice }}</td>
+        <td>{{ bun.controlFreshPeriod }}</td>
+        <td>{{ bun.isAlive }}</td>
+        <td>{{ bun.storageLife }}</td>
+      </tr>
+    </tbody>
+  </table>

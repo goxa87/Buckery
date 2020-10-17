@@ -1,0 +1,15 @@
+<h3>
+    Здесь мы попробуем разные штуки из Материал дизайна
+</h3>
+
+<h4>Автокомплит</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option *ngFor="let car of cars" [value]="car.index">
+      {{car.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<h4>{{selected}}</h4>
